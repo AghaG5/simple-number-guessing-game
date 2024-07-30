@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 import { number } from "@inquirer/prompts";
 console.log("Welcome to number guesing game!");
 console.log(

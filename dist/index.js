@@ -1,12 +1,11 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const prompts_1 = require("@inquirer/prompts");
+#! /usr/bin/env node
+import { number } from "@inquirer/prompts";
 console.log("Welcome to number guesing game!");
 console.log("In this game the system will generate a number and you have guess it enjoy");
 async function GuessNum() {
     const sysGenNUm = Math.floor(Math.random() * 10);
     console.log(`System generated number = ${sysGenNUm}`);
-    const answere = await (0, prompts_1.number)({ message: "Enter you guess", required: true });
+    const answere = await number({ message: "Enter you guess", required: true });
     console.log(`Your guess = ${answere}`);
     if (sysGenNUm === answere) {
         console.log("nice work");
@@ -19,7 +18,7 @@ async function GuessNum1() {
     console.log("Lets Go >>>>");
     const sysGenNUm1 = Math.floor(Math.random() * 100);
     console.log(`System generated number =${sysGenNUm1}`);
-    const answere = await (0, prompts_1.number)({
+    const answere = await number({
         message: "Enter you second guess",
         required: true,
     });
@@ -35,7 +34,7 @@ async function GuessNum2() {
     console.log("once again");
     const sysGenNUm2 = Math.floor(Math.random() * 1000);
     console.log(`System generated number = ${sysGenNUm2}`);
-    const answere = await (0, prompts_1.number)({
+    const answere = await number({
         message: "Enter you second guess",
         required: true,
     });
@@ -51,7 +50,7 @@ async function GuessNum3() {
     console.log("Here comes the imposible level");
     const sysGenNUm3 = Math.floor(Math.random() * 10000000000000000000000000000000);
     console.log(`System generated number = ${sysGenNUm3}`);
-    const answere = await (0, prompts_1.number)({
+    const answere = await number({
         message: "Enter you second guess",
         required: true,
     });
